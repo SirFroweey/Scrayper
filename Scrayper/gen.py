@@ -24,7 +24,7 @@ class Generator:
         self.build_browser()
 
     def _check_requirements(self, host, element):
-        if host[:-4] != "http://":
+        if host[:7] != "http://":
             host = "http://" + host
         if not isinstance(element, Element):
             raise TypeError, "element must be a valid Scrayper.gen.Element() object!"
